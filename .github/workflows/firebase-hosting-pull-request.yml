@@ -14,18 +14,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      # Passo 1: Instalar dependências de forma limpa e confiável
       - name: Install Dependencies
         run: npm ci
 
-      # Passo 2: Rodar testes para garantir a qualidade do código
       - name: Run Tests
         run: npm run teste
 
-      # Passo 3: Fazer o build da aplicação somente se os testes passarem
       - name: Build Application
         run: npm run build
-        
+
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
