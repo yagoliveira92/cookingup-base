@@ -24,7 +24,7 @@ jobs:
 
       # Roda os testes
       - name: Run Tests
-        run: npm test -- --watchAll=false
+        run: npm run teste
 
       # Gera a build de produção
       - name: Build Application
