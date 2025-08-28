@@ -35,7 +35,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-files # Nome do artefato (pode ser qualquer nome)
-          path: build/     # Caminho para a pasta que será 'empacotada'
+          path: dist/     # Caminho para a pasta que será 'empacotada'
 
   # --- JOB 2: RESPONSÁVEL PELO DEPLOY ---
   deploy_to_preview:
