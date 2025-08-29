@@ -23,11 +23,16 @@ jobs:
             - name: Build Application
               run: npm run build
 
+            - name: Copy Files to dist folder
+              run:
+                cp ./firebase.json dist/
+                cp ./firebaserc dist/
+
             - name: Upload build artifact
               uses: actions/upload-artifact@v4
               with:
                 name: build-files
-                path: .
+                path: dist/
 
     deploy_to_preview:
         needs: build_and_test
