@@ -18,16 +18,16 @@ test("Chama a função onClick quando o botão é clicado", () => {
     expect(onClick).toHaveBeenCalledTimes(1);
 });
 
-// test('Teste de snapshot para o botão ativo da TagIngrediente', () => {
-//     const { container } = render(
-//         <TagIngrediente ingrediente={{ nome: 'Ingrediente 1' }} onClick={() => { }} ativo={true} />
-//     );
-//     expect(container).toMatchSnapshot();
-// });
+test('Teste de snapshot para o botão ativo da TagIngrediente', () => {
+    const { container } = render(
+        <TagIngrediente ingrediente={{ nome: 'Ingrediente 1' }} onClick={() => { }} ativo={true} />
+    );
+    expect(container).toMatchSnapshot();
+});
 
-// test('Teste de snapshot para o botão inativo da TagIngrediente', () => {
-//     const { container } = render(
-//         <TagIngrediente ingrediente={{ nome: 'Ingrediente 1' }} onClick={() => { }} ativo={false} />
-//     );
-//     expect(container).toMatchSnapshot();
-// });
+test('Teste de snapshot para o botão inativo da TagIngrediente', () => {
+    const { container } = render(
+        <TagIngrediente ingrediente={{ nome: 'Ingrediente 1' }} onClick={() => { }} ativo={false} />
+    );
+    expect(container).toMatchSnapshot();
+});
